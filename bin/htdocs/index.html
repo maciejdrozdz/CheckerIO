@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>checkerIO</title>
+</head>
+<body>
+    <canvas id="GameCanvas" width="450" height="450"></canvas>
+    <script type="text/javascript" src="cocos2d-js-v3.13.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="checkerIO.js" charset="UTF-8"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            var MaxWidth = 450;
+            var MaxHeight = 450;
+            var Width = window.innerWidth < MaxWidth ? window.innerWidth : MaxWidth;
+            var Height = window.innerHeight < MaxHeight ? window.innerHeight : MaxHeight;
+            var GameCanvas = document.getElementById("GameCanvas");
+            GameCanvas.style.width = Width;
+            GameCanvas.style.height = Height;
+
+            cc.game.run("GameCanvas");
+        };
+    </script>
+</body>
+</html>
